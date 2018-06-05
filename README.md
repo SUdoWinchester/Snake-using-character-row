@@ -2,7 +2,7 @@
 
 Para copilar: gcc -o snake main.c
 
-Caso possua o gcc adicionado ao seu path do windows, apenas e execute o make.bat, l  existe as instruções para
+Caso possua o gcc adicionado ao seu path do windows, apenas e execute o make.bat, lá existe as instruções para
 copilar e executar o código.
 
 Note que esse algoritmo funciona apenas no Windows.
