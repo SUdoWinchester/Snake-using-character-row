@@ -8,4 +8,4 @@ copilar e executar o código.
 Note que esse algoritmo funciona apenas no Windows.
 
 Use W, S, A, D para controlar a cobra, e P para pausar. Se as teclas não estiverem funcionando, verifique se o
-CAPSLOCK está ativado.
+CAPSLOCK está ativado, caso estejá, desligue-o.
