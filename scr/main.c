@@ -7,6 +7,10 @@
 #define CAMPX 80 //num colunas campo
 #define CAMPY 23 //num linhas campo
 
+//velocidade inicial da cobrinha:
+int sleepHorizontal = 75;
+int sleepVertical = 100;
+
 typedef struct corpo {
 	char c;
 	int x;
@@ -137,6 +141,10 @@ int verificaImpacto(cabeca *c, alvo *comida, int campo[CAMPY][CAMPX], int x, int
 		add(c, comida->x, comida->y, comida->c);
 		geraComida(comida, campo);
 		*count += 1;
+		if(*count%5 == 0) {
+			sleepHorizontal -= 5;
+			sleepVertical -= 5;
+		}
 
 		return 0;
 	}
@@ -342,9 +350,9 @@ void start(int campo[CAMPY][CAMPX]) {
 
 		printCobra(c);
 		if(tecla == 'a' || tecla == 'd')
-			Sleep(75);
+			Sleep(sleepHorizontal);
 		else
-			Sleep(100);
+			Sleep(sleepVertical);
 
 		gotoxy(23, 0);
 		printf("Pontos: %d\n", count);
